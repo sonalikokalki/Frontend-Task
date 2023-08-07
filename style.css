@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+:root {
+  --primary: #007f61;
+  --secondry: #f4fbf9;
+  --lightGrey: #c8c8c8;
+  --offWhite: #d9d9d9;
+}
+.container {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.popular {
+  color: var(--primary);
+}
+.highlight {
+  background-color: red;
+  color: white;
+  font-size: 44px;
+}
+.accordion {
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+  padding: 0 50px;
+}
+input[type="radio"]:checked {
+  background-color: var(--primary);
+  content: "";
+}
+
+/* Hide the actual radio buttons */
+.accordion input[type="radio"] {
+  background-color: var(--primary);
+}
+
+/* Styling the accordion header */
+.accordion input[type="radio"]:checked {
+  background-color: #007f61;
+}
+.accordion-label {
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  gap: 15px;
+}
+.accordion-label > div > p {
+  padding-bottom: 15px;
+}
+
+/* Styling the accordion content */
+.accordion-content {
+  display: none;
+  padding: 10px;
+  border-top: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.accordion-content select {
+  padding: 10px 15px;
+  border: 2px solid var(--offWhite);
+  border-radius: 4px;
+}
+
+/* Show the accordion content when the radio button is checked */
+
+.accordion input[type="radio"]:checked + .accordion-label + .accordion-content {
+  display: block;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+.sheeping {
+  color: var(--primary);
+}
+.add-btn {
+  background-color: var(--primary);
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
