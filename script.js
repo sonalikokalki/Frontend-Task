@@ -28,7 +28,7 @@ const finalData = productData.map((data) => {
   return `
     
     <div class="accordion" key=${data.id}>
-    <input type="radio" name="accordion" id=section${data.id} class='radio-btn' />
+    <input type="radio" name="accordion" id=section${data.id}  />
     <label class="accordion-label" for=section${data.id}>
       <div >
         <p>${data.pair} Pair </p>
@@ -41,7 +41,7 @@ const finalData = productData.map((data) => {
     <div class="accordion-content">
       <table>
         <thead>
-          <th>
+          <th style>
             <tr>
               <td>Size</td>
               <td>Colour</td>

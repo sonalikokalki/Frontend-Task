@@ -13,12 +13,17 @@
 }
 .container {
   margin: auto;
-  width: 90%;
+  width: 550px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   flex-wrap: wrap;
   padding: 20px;
+}
+.title{
+  color: var(--primary);
+  text-align: center;
+  font-size: 1.8rem;
 }
 
 .popular {
@@ -30,9 +35,22 @@
   font-size: 44px;
 }
 .accordion {
-  border: 2px solid var(--primary);
+  border: 2px solid var(--lightGrey);
   border-radius: 4px;
   padding: 0 50px;
+
+
+}
+.active,.accordion:hover {
+  background-color: var(--secondry); 
+  border: 2px solid var(--primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+input[type="radio"]{
+  position: absolute;
+  transform: translate(-20px,40px);
 }
 input[type="radio"]:checked {
   background-color: var(--primary);
@@ -53,7 +71,7 @@ input[type="radio"]:checked {
   padding: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   border-radius: 4px;
   gap: 15px;
 }
@@ -64,9 +82,11 @@ input[type="radio"]:checked {
 /* Styling the accordion content */
 .accordion-content {
   display: none;
-  padding: 10px;
   border-top: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  left: 15%;
+  padding: 10px 0px;
+
 }
 .accordion-content select {
   padding: 10px 15px;
@@ -94,4 +114,19 @@ input[type="radio"]:checked {
   color: white;
   font-size: 1.3rem;
   cursor: pointer;
+}
+@media screen and (min-width: 480px) {
+  .accordion-content {
+    left: 18%;
+  }
+  input[type="radio"]{
+    transform: translate(20px, 40px);
+  }
+  
+}
+@media screen and (min-width: 1024px) {
+  .accordion-content {
+    left: 20%;
+  }
+  
 }
